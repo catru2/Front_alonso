@@ -1,16 +1,16 @@
 document.getElementById("loginForm").addEventListener("submit", async function(event) {
     event.preventDefault();  // Evita el envío del formulario por defecto
 
-    const username = document.getElementById("username").value;
+    const user_name = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
     // Configura los datos para enviar al backend
-    const response = await fetch("http://localhost:3000/api/login", {  // Cambia la URL según tu backend
+    const response = await fetch("http://54.235.240.83:80/user/signin", {  // Cambia la URL según tu backend
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ user_name, password }),
     });
 
     // Procesa la respuesta del backend
