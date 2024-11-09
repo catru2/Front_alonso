@@ -4,5 +4,5 @@ FROM nginx:latest
 # Copia tus archivos al directorio predeterminado de Nginx
 COPY . /usr/share/nginx/html
 
-# Exponemos el puerto 8080
+# Exponemos el puerto 
 EXPOSE 80
